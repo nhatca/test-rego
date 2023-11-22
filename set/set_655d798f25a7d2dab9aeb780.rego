@@ -42,7 +42,7 @@ allow_any_of_0_all_of_0 if {
 }
 
 allow_any_of_1_any_of_0 if { 
-	input.resource.attribute.name == "Viet Nam"
+	input.resource.attribute.name == "Viet Nam 2"
 }
 
 allow_any_of_1_any_of_1 if { 
