@@ -38,7 +38,7 @@ allow_any_of_1_any_of if {
 }
 
 allow_any_of_0_all_of_0 if { 
-	input.resource.attribute.name == "Đông Lào"
+	input.resource.attribute.name == "Đông Lào 1"
 }
 
 allow_any_of_1_any_of_0 if { 
