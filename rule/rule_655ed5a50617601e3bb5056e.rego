@@ -1,12 +1,13 @@
 package metub.abac.rule_655ed5a50617601e3bb5056e
 
 import future.keywords.if
+import future.keywords.in
 import data.abac.set_655ed564d4ef4ab950e34554 as allow_set
 
 default allow:= false
 
 allow_permission if {
-	creators:read == concat(":", [input.resource.type,input.action])
+	"creators:read" == concat(":", [input.resource.type,input.action])
 }
 
 allow_resource_in_project if {
