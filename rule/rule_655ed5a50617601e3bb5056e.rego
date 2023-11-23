@@ -12,7 +12,7 @@ allow_permission if {
 allow_resource_in_project if {
 	is_array(input.resource.attribute.project_ids)
 	some project_id in input.resouce.attribute.project_ids
-	64661480c23d0cb0b420f2f8 == project_id
+	"64661480c23d0cb0b420f2f8" == project_id
 }
 
 allow if {
