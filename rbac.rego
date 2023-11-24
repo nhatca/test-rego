@@ -5,20 +5,16 @@ import future.keywords.in
 
 default allow := false
 
-permission := concat(":", [input.resource.type,input.action])
+permission := concat(":", [input.resource.type, input.action])
 
 allow if {
-    some per in input.user.permissions
-    permission == per
+	some p in data.users[input.user].permissions
+    p == permission
 }
 
 allow if {
 	is_array(input.resource.project_ids)
-    is_array(input.user.projects)
-	some pro in input.user.projects
-    some p_id in input.resource.project_ids
-    is_array(pro.permissions)
-    some per in pro.permissions
-	pro.id == p_id
-    per == permission
+    some id in input.resource.project_ids
+    some p in data.users[input.user].projects[id].permissions
+    p == permission
 }
