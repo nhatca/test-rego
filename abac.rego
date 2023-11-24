@@ -24,5 +24,5 @@ allow if {
     rule_match(v)
 
     # matching rule of user
-    data.metub.rule[concat("_", ["set", k])].allow
+    data.metub.rule[concat("_", ["rule", k])].allow
 }
